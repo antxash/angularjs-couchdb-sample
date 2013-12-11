@@ -10,3 +10,5 @@ A simple sample that connect angularjs with couchdb by $resource
  - [enable CORS in CouchDB][1]
 
 You can use Python's SimpleHTTPServer to run this sample.
+
+[1]: http://wiki.apache.org/couchdb/CORS
