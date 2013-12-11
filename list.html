@@ -1,0 +1,22 @@
+<input type="text" ng-model="search" class="search-query" placeholder="Search">
+<table>
+  <thead>
+    <tr>
+      <th>Project</th>
+      <th>Description</th>
+      <th><a href="#/new"><i class="icon-plus-sign"></i></a></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="project in projects.rows | filter:search | orderBy:'doc.name'">
+      <td><a href="{{project.doc.site}}" target="_blank">{{project.doc.name}}</a></td>
+      <td>{{project.doc.description}}</td>
+      <td>
+        <a href="#/edit/{{project.doc._id}}"><i class="icon-pencil"></i></a>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<!----
+<pre>{{projects|json}}</pre>
+-->
